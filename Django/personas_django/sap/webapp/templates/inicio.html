@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Inicio</h1>
+<h2>el numero de personas es: {{num_personas}}</h2>
+
+<div>
+    <ul>
+        {% for persona in personas %}
+        <li>Persona {{persona.id}} nombre:{{persona.nombre}} {{persona.apellido}} email:{{persona.email}}</li>
+        {% endfor %}
+
+    </ul>
+</div>
+
+</body>
+</html>

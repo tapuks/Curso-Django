@@ -3,6 +3,8 @@ from django.shortcuts import render
 
 
 # Create your views here.
+from personas.models import Persona
+
 
 def bienvenido(request):
 
@@ -18,3 +20,8 @@ def saludo(request):
 
 def contacto(request):
     return HttpResponse("cp: 22549 \n tel: 652200331")
+
+def inicio(request):
+    num_personas = Persona.objects.count()
+    personas = Persona.objects.all()
+    return render(request, "inicio.html", {'num_personas': num_personas, 'personas': personas})
