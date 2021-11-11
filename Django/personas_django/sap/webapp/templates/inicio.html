@@ -8,12 +8,15 @@
     <h1>Inicio</h1>
 <h2>el numero de personas es: {{num_personas}}</h2>
 
+    <div><a href="nueva_persona">Añadir persona</a></div>
+
 <div>
     <ul>
         {% for persona in personas %}
-        <li>Persona {{persona.id}} nombre:{{persona.nombre}} {{persona.apellido}} email:{{persona.email}}</li>
+            <li>Persona {{persona.id}} {{persona.nombre}} {{persona.apellido}}, email:{{persona.email}}
+                <a href="detalle_persona/{{persona.id}}">detalles</a>
+            </li>
         {% endfor %}
-
     </ul>
 </div>
 

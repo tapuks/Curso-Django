@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from personas.views import detallePersona, nuevaPersona
 from webapp.views import bienvenido, adios, saludo, contacto, inicio
 
 urlpatterns = [
@@ -24,6 +25,8 @@ urlpatterns = [
     path('adios/', adios),
     path('saludo.html/', saludo),
     path('contacto/', contacto),
-    path('', inicio)
+    path('', inicio),
+    path('detalle_persona/<int:id>', detallePersona),
+    path('nueva_persona/', nuevaPersona),
 
 ]
